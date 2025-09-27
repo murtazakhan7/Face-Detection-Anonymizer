@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+Streamlit Face Detection Anonymizer Frontend
+A beautiful web interface for the Face Detection Anonymizer tool.
+"""
+
 import streamlit as st
 import cv2
 import mediapipe as mp
@@ -228,8 +234,8 @@ def main():
     st.markdown("""
     <div class="feature-box">
         <h3>🛡️ Privacy-Focused Face Anonymization</h3>
-        <p>Protect privacy by automatically detecting and blurring faces in your images and videos. 
-        Built with MediaPipe AI and OpenCV for accurate, real-time processing.</p>
+        <p>A production-ready tool to detect and anonymize faces in images, videos, and live webcam feeds using OpenCV and MediaPipe. 
+        Built with advanced AI for accurate, real-time processing while preserving image quality and ensuring complete privacy protection.</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -252,12 +258,15 @@ def main():
         
         st.header("📋 Features")
         st.markdown("""
-        - 🎯 **AI-Powered Detection**: Advanced MediaPipe face detection
-        - 🖼️ **Image Processing**: Upload and process images instantly
-        - 🎬 **Video Processing**: Batch process entire videos
-        - ⚡ **Real-time Preview**: See results immediately
-        - 🔒 **Privacy First**: All processing happens locally
-        - 📱 **Easy to Use**: Drag & drop interface
+        - 🎯 **Smart Face Detection**: Advanced MediaPipe ML model for accurate face detection
+        - 🛡️ **Privacy-Focused**: Blurs faces while preserving image quality
+        - 📊 **Progress Tracking**: Real-time progress monitoring for video processing
+        - 📹 **Interactive Webcam**: Live processing with intuitive controls
+        - 📁 **Auto-Generated Filenames**: Intelligent output file naming
+        - ⚠️ **Error Handling**: Comprehensive error checking and user feedback
+        - ⚙️ **Flexible Blur Intensity**: Adjustable blur levels (default: 51)
+        - 🔧 **Production-Ready**: Handles edge cases and resource cleanup
+        - 🔒 **Local Processing**: All data stays on your device
         """)
     
     # Main content tabs
@@ -379,21 +388,21 @@ def main():
         
         with col1:
             st.markdown("""
-            ### 🔧 Technical Details
+            ### 🔧 Technical Features
             
-            **AI Models Used:**
-            - **MediaPipe Face Detection**: Google's production-ready ML solution
-            - **OpenCV**: Computer vision processing library
+            **Core Capabilities:**
+            - **Smart Face Detection**: MediaPipe's ML model for accurate face detection
+            - **Privacy-Focused**: Blurs faces while preserving image quality  
+            - **Progress Tracking**: Shows real-time progress for video processing
+            - **Interactive Webcam**: Real-time processing with 'q' to quit, 's' to save frames
+            - **Auto-Generated Filenames**: Creates output files automatically if not specified
+            - **Error Handling**: Comprehensive error checking and user feedback
+            - **Flexible Blur Intensity**: Adjustable blur levels (default: 51)
             
-            **Processing Pipeline:**
-            1. 🎯 Face detection using MediaPipe AI
-            2. 📊 Bounding box extraction
-            3. 🌀 Gaussian blur application
-            4. ✨ Seamless integration back to image
-            
-            **Supported Formats:**
-            - **Images**: PNG, JPG, JPEG, BMP, TIFF
-            - **Videos**: MP4, AVI, MOV, MKV
+            **Production-Ready:**
+            - Handles edge cases like missing files
+            - Webcam access issue management  
+            - Proper resource cleanup and memory management
             """)
         
         with col2:
@@ -406,9 +415,13 @@ def main():
             - ✅ Files are not stored permanently
             - ✅ Temporary files are automatically deleted
             
+            **Supported Formats:**
+            - **Images**: PNG, JPG, JPEG, BMP, TIFF
+            - **Videos**: MP4, AVI, MOV, MKV
+            
             **Use Cases:**
             - 📚 Educational content creation
-            - 🏢 Corporate presentations
+            - 🏢 Corporate presentations  
             - 📱 Social media content
             - 🎥 Video production
             - 🔒 Privacy compliance
