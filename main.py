@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Streamlit Face Detection Anonymizer Frontend
-A beautiful web interface for the Face Detection Anonymizer tool.
-"""
-
 import streamlit as st
 import cv2
 import mediapipe as mp
