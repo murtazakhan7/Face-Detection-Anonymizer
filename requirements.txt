@@ -1,1 +1,2 @@
-pip install opencv-python mediapipe
+# Install requirements
+pip install streamlit opencv-python mediapipe pillow numpy
